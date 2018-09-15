@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Galeev</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+</head>
+<body>
+<header>
+<div class="overlay">
+	<a class="logo" href="#"><img src="img/logo-w.png" alt=""></a>
+    <nav class="overlayMenu">  
+        <ul role="menu">
+            <li><a href="#about" role="menuitem">About</a></li>
+            <li><a href="#team" role="menuitem">Team</a></li>
+            <li><a href="#portfolio" role="menuitem">Portfolio</a></li>
+            <li><a href="#" role="menuitem">Contancts</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="navBurger" role="navigation" id="navToggle"></div> 
+</header>
+<section>
+	<div class="page">
+		<div class="page-item">
+			<h1>DEER PROJECT</h1>
+		</div>
+		<div class="page-btn">
+			<button class="btn">Learn more</button>
+		</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="row">
+	<div class="col-xl-12 about-title rellax" data-rellax-speed="-1">
+		<h2>About us</h2>
+	</div>
+</div>
+		<div class="row">
+			<div class="col-xl-6 about-image rellax" data-rellax-speed="4">
+			<img src="img/about.png" alt="">
+			</div>
+			<div class="col-xl-6 about-text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit incidunt eligendi maiores eius blanditiis repellendus vel ut labore voluptatum distinctio, cum tenetur nulla quod, placeat. Molestias corrupti quod, porro nam.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque rerum explicabo nam consequatur, deserunt distinctio animi illo odio delectus sed laudantium in perspiciatis error corporis sit, fugiat incidunt, illum accusamus.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="team">
+	<div class="container team">
+		<div class="row">
+			<div class="col-xl-12 about-title rellax" data-rellax-speed="-1">
+				<h2>Team</h2>
+			</div>
+			<div class="row">
+				<div class="col-xl-4 team-item">
+					<div class="team-item__head">
+						<h3>Albert</h3>
+					</div>
+					<div class="team-item__body">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="team-item__footer">
+						<h4>Web developer</h4>
+					</div>
+				</div>
+				<div class="col-xl-4 team-item">
+					<div class="team-item__head">
+						<h3>Jhon</h3>
+					</div>
+					<div class="team-item__body">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="team-item__footer">
+						<h4>SEO</h4>
+					</div>
+				</div>
+				<div class="col-xl-4 team-item">
+					<div class="team-item__head">
+						<h3>Amanda</h3>
+					</div>
+					<div class="team-item__body">
+						<img src="img/logo.png" alt="">
+					</div>
+					<div class="team-item__footer">
+						<h4>Web designer</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="portfolio">
+	<div class="container portfolio">
+		<div class="row">
+			<div class="col-xl-12 about-title rellax" data-rellax-speed="-1">
+				<h2>Portfolio</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			</div>
+					<div class="row">
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			<div class="col-xl-3 portfolio-item">
+				<div class="portfolio-item__body">
+					<a href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+			</div>
+			</div>
+		</div>
+</section>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.hover3d.min.js"></script>
+<script src="js/rellax.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Also can pass in optional settings block
+  var rellax = new Rellax('.rellax', {
+    center: true,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: true
+  });
+</script>
+<script>
+$(document).ready(function(){
+			$(".portfolio-item").hover3d({
+				selector: ".portfolio-item__body",
+				sensitivity: 10,
+				perspective: 500,
+			});
+		});
+</script>
+<script>
+$(document).ready(function(){
+			$(".team-item").hover3d({
+				selector: ".team-item__body",
+				sensitivity: 10,
+				perspective: 500,
+			});
+		});
+</script>
+</body>
+</html>

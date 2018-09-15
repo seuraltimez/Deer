@@ -1,0 +1,293 @@
+*{
+  margin: 0;
+  padding: 0;
+  }
+.navBurger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  background: #000;
+  box-sizing: border-box;
+  background-clip: content-box;
+  width: 30px;
+  height: 24px;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: all 0.25s ease-in-out;
+}
+.navBurger:before, .navBurger:after {
+  content: "";
+  position: absolute;
+  background: #000;
+  height: 2px;
+  width: 100%;
+  right: 0;
+  will-change: rotate;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+}
+.navBurger:before {
+  top: -10px;
+}
+.navBurger:after {
+  bottom: -10px;
+  width: 90%;
+}
+.navBurger.active {
+  background: transparent;
+  background-clip: content-box;
+}
+.navBurger.active:before {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 0;
+  background: #fff;
+  width: 110%;
+}
+.navBurger.active:after {
+  bottom: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  background: #fff;
+  width: 110%;
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(0,0,0,.9);
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+@media screen and (min-width:0px) and (max-width:800px) {
+.overlay {
+  position: fixed;
+  background: #aaa;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+}
+.overlay.open {
+  opacity: 0.99;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.overlay.open li {
+  display: block;
+  -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+          animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.overlay.open li:nth-of-type(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.overlayMenu {
+  position: absolute;
+  text-align: right;
+  right: 11vw;
+  bottom: 20vw;
+}
+.overlayMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.overlayMenu ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+  width: 100%;
+}
+.overlayMenu ul li a {
+  font-family: 'Titillium Web', sans-serif;
+  display: inline-block;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 40px 10px 40px;
+  margin: 5px 0;
+  transition: 0.2s;
+}
+.overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
+  -webkit-transform: translateX(-2px);
+          transform: translateX(-2px);
+  padding-left: 80px;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.locked {
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+.page{
+    font-family: 'Bungee Hairline', cursive;
+    color: #000;
+    height: 30%;
+    min-height: 768px;
+    background: url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.page-item{
+    display: grid;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 200px;
+    text-align: center;
+}
+.btn{
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+  text-transform: uppercase;
+  width: 120px;
+  padding: 10px;
+  outline: none;
+  background: transparent;
+  cursor: pointer; 
+  border: 1px solid #000;
+  color: #000;
+  transition:0.5s;
+}
+.btn:hover {
+  box-shadow:0 30px 70px rgba(0,0,0,.4);
+}
+.page-btn{
+  display: grid;
+  justify-content: center;
+}
+.logo img{
+  width: 200px;
+  position: relative;
+  left: 50px;
+}
+.about-title > h2{
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+  font-family: 'Bungee Hairline', cursive;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.about-image{
+  text-align: center;
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+}
+.about-text{
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+.team-item{
+  margin-bottom: 100px;
+}
+.team-item__head{
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+  font-family: 'Bungee Hairline', cursive;
+  text-align: center;
+}
+.team-item__footer{
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+.team-item__body img{
+  width: 340px;
+}
+.team-item{
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+  border-radius:10px;
+  transition:0.5s;
+}
+.team-item:hover {
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+}
+.portfolio-item__body img{
+  width: 250px;
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+  transition:0.5s;
+}
+.portfolio-item__body img:hover {
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+}
+/* This class can be replaced using options */
+.hover-in{
+  transition: .3s ease-out;
+}
+.hover-out{
+  transition: .3s ease-in;
+}
