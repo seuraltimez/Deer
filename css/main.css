@@ -229,7 +229,7 @@
 .logo img{
   width: 200px;
   position: relative;
-  left: 50px;
+  left: 10px;
 }
 .about-title > h2{
   box-shadow:0 20px 50px rgba(0,0,0,.1);
@@ -265,7 +265,9 @@
   padding: 10px;
 }
 .team-item__body img{
-  width: 360px;
+  display: block;
+  margin: 0 auto;
+  width: 350px;
 }
 .team-item{
   box-shadow:0 20px 50px rgba(0,0,0,.1);
@@ -276,15 +278,18 @@
   box-shadow:0 30px 70px rgba(0,0,0,.5);
 }
 .portfolio-item__body img{
+  display: block;
+  margin: 0 auto;
   width: 360px;
   box-shadow:0 20px 50px rgba(0,0,0,.1);
   transition:0.5s;
+  border: 2px solid #000;
 }
 .portfolio-item__body img:hover {
   box-shadow:0 30px 70px rgba(0,0,0,.5);
 }
 .portfolio-item__body{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 /* This class can be replaced using options */
 .hover-in{
